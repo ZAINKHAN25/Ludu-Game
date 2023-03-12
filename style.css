@@ -3,6 +3,11 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+body {
+    overflow: hidden;
+}
+
 .background{
     background-image: linear-gradient(red, brown);
     width: 100vw;
@@ -84,5 +89,41 @@
 }
 
 .hidden{
-    display: hidden;
+    visibility: hidden;
+}
+
+#areyousure{
+    z-index: 5;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(47, 46, 46, 80%);
+    position: absolute;
+    margin-top: -100vh;
+}
+
+#workingarea{
+    z-index: 6;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    margin-top: -100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#workingarea h1, button{
+    background-color: rgb(214, 214, 214);
+    color: rgb(0, 0, 0);
+    margin-top: 25px;
+    font-size: 30px;
+    width: 50vw;
+    padding: 10px;
+    height: 10vh;
+    text-align: center;
+}
+
+#workingarea button:hover{
+    background-color: rgb(126, 121, 121);
 }

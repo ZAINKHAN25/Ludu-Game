@@ -83,6 +83,7 @@
 
 
 // Define variables for game elements
+var body = document.querySelector('body')
 const player1Score = document.querySelector("#onetscore");
 const player2Score = document.querySelector("#twotscore");
 const player1CurrentScore = document.querySelector("#dice-1");
@@ -91,6 +92,10 @@ const rollButton = document.querySelector("#rolldice");
 const holdButton = document.querySelector("#hold");
 const resetButton = document.querySelector("#newgame");
 const diceImage = document.querySelector("#imags");
+const areyousure = document.querySelector("#areyousure");
+const workingarea = document.querySelector("#workingarea")
+const heading = document.querySelector("#heading")
+const btn25 = document.querySelector("#btn25")
 
 let activePlayer = 1; // Initialize active player to player 1
 let currentScore = 0; // Initialize current score to 0
@@ -151,3 +156,21 @@ function hold() {
 rollButton.addEventListener("click", rollDice);
 holdButton.addEventListener("click", hold);
 resetButton.addEventListener("click", () => location.reload());
+
+body.addEventListener('keydown', (e) => {
+    if (e.key === "Escape"){     
+            areyousure.classList.remove('hidden');
+            workingarea.classList.remove('hidden')
+            heading.classList.remove('hidden')
+            btn25.classList.remove('hidden')
+            location.reload();
+    }
+} )
+
+function myfuction(){
+    areyousure.classList.add('hidden');
+    workingarea.classList.add('hidden')
+    heading.classList.add('hidden')
+    btn25.classList.add('hidden')
+    location.reload();
+}
