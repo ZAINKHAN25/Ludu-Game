@@ -82,3 +82,7 @@
     height: 20vh;
     margin-top:35vh;
 }
+
+.hidden{
+    display: hidden;
+}
