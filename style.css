@@ -74,3 +74,11 @@
 .btn:hover{
     background-color: rgb(238, 225, 209);
 }
+
+#imags{
+    position: absolute;
+    margin-left:30vw;
+    width:10vw;
+    height: 20vh;
+    margin-top:35vh;
+}
